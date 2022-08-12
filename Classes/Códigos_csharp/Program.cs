@@ -16,9 +16,9 @@ Console.WriteLine( cid2.mostrarDados() );
 correntista crr1 = new correntista();
 correntista crr2 = new correntista();
 
-crr1.cpf = "141.024.549-77";
+crr1.cpf = "141.025.597-78";
 crr1.nome = "Lukas Rodrigues";
-crr1.telefone = "+55 (47) 99613-5693";
+crr1.telefone = "+55 (47) 99626-5793";
 
 crr2.cpf = "091.245.678-90";
 crr2.nome = "Roger klaus";
