@@ -1,4 +1,11 @@
-﻿// cria dois objetos do tipo cidade
+﻿Cidade c1 = new Cidade("Joinville", 600000);
+Cidade c2 = new Cidade();
+
+Console.Clear();
+Console.WriteLine( c1.mostrarDados() );
+Console.WriteLine( c2.mostrarDados() );
+/*
+// cria dois objetos do tipo cidade
 Cidade cid1 = new Cidade();
 Cidade cid2 = new Cidade();
 Cidade cid3 = new Cidade();
@@ -35,3 +42,4 @@ crr2.telefone = "+55 (47) 99999-5490";
 Console.Clear();
 Console.WriteLine( crr1.mostrarDados() );
 Console.WriteLine( crr2.mostrarDados() );
+*/
