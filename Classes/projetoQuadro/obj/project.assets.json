@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\códigos_csharp\\códigos_csharp.csproj",
-      "projectName": "códigos_csharp",
-      "projectPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\códigos_csharp\\códigos_csharp.csproj",
+      "projectUniqueName": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\projeto4.csproj",
+      "projectName": "projeto4",
+      "projectPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\projeto4.csproj",
       "packagesPath": "C:\\Users\\lukas.rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\códigos_csharp\\obj\\",
+      "outputPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lukas.rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config",
