@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\projeto4.csproj",
-      "projectName": "projeto4",
-      "projectPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\projeto4.csproj",
+      "projectUniqueName": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\Classes.csproj",
+      "projectName": "Classes",
+      "projectPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\Classes.csproj",
       "packagesPath": "C:\\Users\\lukas.rodrigues\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\projetoQuadro\\obj\\",
       "projectStyle": "PackageReference",
