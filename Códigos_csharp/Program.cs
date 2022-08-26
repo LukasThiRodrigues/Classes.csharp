@@ -1,9 +1,24 @@
-﻿Cidade c1 = new Cidade("Joinville", 600000);
+﻿Cidade c1 = new Cidade("Joinville", 900);
 Cidade c2 = new Cidade();
+Cidade c3 = new Cidade("Jaraguá");
 
 Console.Clear();
-Console.WriteLine( c1.mostrarDados() );
-Console.WriteLine( c2.mostrarDados() );
+
+if (c1.definirArea(1000)){
+    Console.WriteLine("Área definida com sucesso");
+} else{
+    Console.WriteLine("Erro! Área muito grande ou população muito pequena");
+}
+Console.WriteLine();
+
+Console.WriteLine( c1.mostrarDados() ); // Chamada de método
+Console.WriteLine();
+Console.WriteLine( c1.mostrarDados("H") ); // Chamada de método
+Console.WriteLine();
+Console.WriteLine( c1.mostrarDados("A") ); // Chamada de método
+Console.WriteLine();
+Console.WriteLine( c1.mostrarDados("T") ); // Chamada de método
+
 /*
 // cria dois objetos do tipo cidade
 Cidade cid1 = new Cidade();
