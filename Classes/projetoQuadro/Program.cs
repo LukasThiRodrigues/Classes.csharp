@@ -1,4 +1,5 @@
-﻿Tela tela = new Tela();
+Tela tela = new Tela();
+TelaCliente tc = new TelaCliente(15,5);
 int op;
 List<string> opcoes = new List<string>();
 opcoes.Add("1- Cadastro de clientes"    );
@@ -12,6 +13,8 @@ while(true){
     op = tela.mostrarMenu(3,2,opcoes);
 
 if (op==0) break;
+if (op==1) tc.montarTela();
+Console.ReadKey();
 }
 
 Console.ReadKey();
