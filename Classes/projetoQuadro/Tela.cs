@@ -9,8 +9,27 @@ class Tela{
         this.corFonte = 15;
     }
 
+    public int mostrarMenu(int col, int lin, List<string>opcoes){
+        int escolha = 0;
 
-    public void prepararTela(){
+        Console.SetCursorPosition(col,lin);
+        Console.Write("---=== Menu ===---");
+        lin++;
+
+        for(int x=0; x<opcoes.Count; x++){
+            Console.SetCursorPosition(col, lin);
+            Console.Write( opcoes[x] );
+            lin++;
+        }
+        Console.SetCursorPosition(col, lin);
+        Console.Write("Opção: ");
+        escolha = Convert.ToInt16(Console.ReadLine());
+
+        return escolha;
+    }
+
+
+    public void prepararTela(string msg=""){
         int lin;
         int col;
 
@@ -33,5 +52,9 @@ class Tela{
         Console.SetCursorPosition(0,24); Console.Write("+");
         Console.SetCursorPosition(79,0); Console.Write("+");
         Console.SetCursorPosition(79,24); Console.Write("+");
+
+        col = (80-msg.Length)/2;
+        Console.SetCursorPosition(col,1);
+        Console.Write(msg);
     }
 }
