@@ -50,4 +50,16 @@ class Conta {
         this.transacoes.Add(new Transacao(-val,dat,desc));
     }
 
+    public string recuperarExtrato(){
+        var relatorioExtrato = new System.Text.StringBuilder();
+        decimal saldo = 0;
+        relatorioExtrato.AppendLine("Data\t\tValor\tSaldo\tDescricao");
+        foreach(var item in this.transacoes){
+            saldo += item.valor;
+            relatorioExtrato.AppendLine($"{item.data.ToShortDateString()}\t{item.valor}\t{saldo}\t{item.descricao}");
+        }
+
+        return relatorioExtrato.ToString();
+    }
+
 }
