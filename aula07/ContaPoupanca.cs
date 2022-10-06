@@ -1,7 +1,6 @@
 class ContaPoupanca : Conta
 {
     // ganha 2% de juros ao fim do mês, com base no saldo da conta
-    // testetetetetetetejhboyigoyg08yf6o8f086
 
     public ContaPoupanca(string tit, decimal val) : base(tit,val)
     {
