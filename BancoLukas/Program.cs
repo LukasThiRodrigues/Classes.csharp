@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Tela tela = new Tela();
+
+tela.ConfigurarTela();
+tela.montarTelaSistema();
+
+Console.ReadKey();
