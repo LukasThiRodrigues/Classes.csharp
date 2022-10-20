@@ -1,0 +1,15 @@
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\bin\Debug\net6.0\BancoLukas.exe
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\bin\Debug\net6.0\BancoLukas.deps.json
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\bin\Debug\net6.0\BancoLukas.runtimeconfig.json
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\bin\Debug\net6.0\BancoLukas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\bin\Debug\net6.0\BancoLukas.pdb
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.csproj.AssemblyReference.cache
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.AssemblyInfoInputs.cache
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.AssemblyInfo.cs
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.csproj.CoreCompileInputs.cache
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\refint\BancoLukas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.pdb
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\BancoLukas.genruntimeconfig.cache
+C:\Users\lukas.rodrigues\Documents\Classes\BancoLukas\obj\Debug\net6.0\ref\BancoLukas.dll
