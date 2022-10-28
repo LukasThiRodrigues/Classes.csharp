@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lukas.rodrigues\\.nuget\\packages\\": {}
+    "C:\\Users\\lukas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\BancoLukas\\BancoLukas.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Documentos\\Coisas Lukas\\Classes.csharp\\BancoLukas\\BancoLukas.csproj",
       "projectName": "BancoLukas",
-      "projectPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\BancoLukas\\BancoLukas.csproj",
-      "packagesPath": "C:\\Users\\lukas.rodrigues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas.rodrigues\\Documents\\Classes\\BancoLukas\\obj\\",
+      "projectPath": "C:\\Users\\lukas\\OneDrive\\Documentos\\Coisas Lukas\\Classes.csharp\\BancoLukas\\BancoLukas.csproj",
+      "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lukas\\OneDrive\\Documentos\\Coisas Lukas\\Classes.csharp\\BancoLukas\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lukas.rodrigues\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
