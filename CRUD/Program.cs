@@ -1,11 +1,11 @@
 ﻿Tela tela = new Tela();
-ControleConta contas = new ControleConta(tela);
+Controle anime = new Controle(tela);
 
 string opcao;
 List<string> menuPrincipal = new List<string>();
 
 menuPrincipal.Add("1 - Lista        ");
-menuPrincipal.Add("2 - Pesquisar    ");
+menuPrincipal.Add("2 - Informações  ");
 menuPrincipal.Add("3 - Favoritos    ");
 menuPrincipal.Add("0 - Sair         ");
 
@@ -16,7 +16,9 @@ while(true){
     opcao = tela.mostrarMenu(menuPrincipal,3,3);
 
     if(opcao == "0") break;
-    if(opcao == "2") contas.executarCRUD();
+    if(opcao == "1") anime.executarLista();
+    if(opcao == "2") anime.executarCRUD();
+    if(opcao == "3") anime.executarFavoritos();
 }
 
 //tela.montarMoldura(5,5,40,10);
