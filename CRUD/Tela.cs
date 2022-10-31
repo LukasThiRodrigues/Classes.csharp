@@ -25,13 +25,13 @@ class Tela
 
     public void montarTelaSistema()
     {
-        this.montarMoldura(0, 0, 79, 24);
-        this.montarLinhaHor(2, 0, 79);
-        this.centralizar(1, 0, 65, "Lista de Animes");
+        this.montarMoldura(0, 0, 0, 119, 28);
+        this.montarLinhaHor(2, 0, 119);
+        this.centralizar(1, 0, 100, "Lista de Animes");
     }
 
 
-    public void montarMoldura(int ci, int li, int cf, int lf)
+    public void montarMoldura(int ci, int li, int cm, int cf, int lf)
     {
         int col, lin;
 
@@ -54,6 +54,8 @@ class Tela
             Console.Write("|");
             Console.SetCursorPosition(cf, lin);
             Console.Write("|");
+            Console.SetCursorPosition(cm, lin);
+            Console.Write("|");
         }
 
         // desenha os cantos da moldura
@@ -61,6 +63,8 @@ class Tela
         Console.SetCursorPosition(ci, lf); Console.Write("+");
         Console.SetCursorPosition(cf, li); Console.Write("+");
         Console.SetCursorPosition(cf, lf); Console.Write("+");
+        Console.SetCursorPosition(cm, li); Console.Write("+");
+        Console.SetCursorPosition(cm, lf); Console.Write("+");
     }
 
 
@@ -108,15 +112,16 @@ class Tela
     }
 
     public string mostrarMenu(List<string> menu, int ci, int li){
-        int cf, lf, x;
+        int cf, lf, cm, x;
         string op;
 
         // calcula a linha final e a coluna final
         cf = ci + menu[0].Length + 1;
-        lf = li + menu.Count() + 2;
+        lf = li + menu.Count() + 21;
+        cm = 56;
 
         // monta a moldura do menu
-        this.montarMoldura(ci,li,cf,lf);
+        this.montarMoldura(ci,li, cm, cf,lf);
 
         // mostra as opções do menu
         for ( x = 0; x < menu.Count(); x++){
@@ -124,7 +129,7 @@ class Tela
             Console.Write(menu[x]);
         }
             Console.SetCursorPosition(ci+1, li+x+1);
-            Console.Write("Opção: ");
+            Console.Write("Ir Para: ");
             op = Console.ReadLine();
             return op;
     }

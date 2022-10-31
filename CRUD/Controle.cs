@@ -22,31 +22,17 @@ class Controle{
     }
 
     public void executarLista(){
-        while(true){
-            this.tela.montarMoldura(40,5,70,20);
+            this.tela.montarMoldura(40,5, 0,70,20);
             this.tela.montarLinhaHor(7,40,70);
             this.tela.centralizar(6,42,65,"Lista");
             this.montarLista();
             Console.ReadKey();
-            break;
-        }
     }
 
-    public void executarFavoritos(){
-        while(true){
-            this.tela.montarMoldura(33,5,70,20);
-            this.tela.montarLinhaHor(7,33,70);
-            this.tela.centralizar(6,34,65,"Favoritos");
-            this.favoritos();
-            Console.ReadKey();
-            break;
-        }
-    }
-
-    public void executarCRUD(){
+    public void executarINFOS(){
         while(true){
             // montar a tela do CRUD de contas
-            this.tela.montarMoldura(10,5,70,16);
+            this.tela.montarMoldura(10,5,0,70,16);
             this.tela.montarLinhaHor(7,10,70);
             this.tela.centralizar(6,10,65,"Animes");
             this.montarTelaConta();
@@ -70,11 +56,11 @@ class Controle{
             mostra a mensagem de conta não encontrada */
             if(achou){
                 // achou a conta e vai mostrar os dados
-                this.mostrarDadosConta();
+                this.mostrarInfosAnimes();
 
                 // pergunta para o usuario o que ele deseja fazer
 
-                string resp = this.tela.perguntar(11, 15, "Deseja Atualizar, Favoritar ou Voltar (A/F/V): ");
+                string resp = this.tela.perguntar(11, 15, "Deseja Atualizar ou Voltar (A/V): ");
                 if(resp.ToUpper() == "A"){
                     // o usuário deseja alterar (apenas o nome do titular)
                     this.numEmps = this.tela.perguntar(11,14,"Número de episódios: ");
@@ -85,16 +71,7 @@ class Controle{
                     if (resp.ToUpper() == "S"){
                         this.bancoDados[this.posicao].numeps = this.numEmps;
                     }
-                } else if (resp.ToUpper() == "F"){
-
-                    // o usuário deseja excluir a conta (a conta e toda a sua movimentacao)
-                    this.tela.limparArea(11,14,69,14);
-                    resp = this.tela.perguntar(11,14,"Quer adicionar esse anime aos favoritos? (S/N): ");
-                    if (resp.ToUpper() == "S"){
-                        this.favoritos();
-                    }
-                }
-
+                } 
             } else{
                 /* não achou a conta, mostra a mensagem e 
                 pergunta se deseja cadastrar uma nova conta */
@@ -135,7 +112,7 @@ class Controle{
         Console.Write("Número Eps   :");
     }
 
-    public void mostrarDadosConta(){
+    public void mostrarInfosAnimes(){
         Console.SetCursorPosition(26,9);
         Console.Write(this.bancoDados[this.posicao].nomeAnime);
         Console.SetCursorPosition(26,10);
@@ -149,32 +126,12 @@ class Controle{
     }
 
     public void montarLista(){
-        if(this.numId == null){
-            Console.SetCursorPosition(41,8);
-            Console.Write(this.bancoDados[0].id + " - " + this.bancoDados[0].nomeAnime);
-            Console.SetCursorPosition(41,9);
-            Console.Write(this.bancoDados[1].id + " - " + this.bancoDados[1].nomeAnime);
-            Console.SetCursorPosition(41,10);
-            Console.Write(this.bancoDados[2].id + " - " + this.bancoDados[2].nomeAnime);
-        } else {
-            Console.SetCursorPosition(41,8);
-            Console.Write(this.bancoDados[0].id + " - " + this.bancoDados[0].nomeAnime);
-            Console.SetCursorPosition(41,9);
-            Console.Write(this.bancoDados[1].id + " - " + this.bancoDados[1].nomeAnime);
-            Console.SetCursorPosition(41,10);
-            Console.Write(this.bancoDados[2].id + " - " + this.bancoDados[2].nomeAnime);
-            Console.SetCursorPosition(41,11);
-            Console.Write(this.bancoDados[3].id + " - " + this.bancoDados[3].nomeAnime);
-        }
-    }
-
-    public void favoritos(){
-        if(this.bancoDados[this.posicao].nomeAnime == "Dragon Ball"){
-            Console.SetCursorPosition(34,8);
-            Console.Write("Sua lista de favoritos está vazia!");
-        } else {
-            Console.SetCursorPosition(34,8);
-            Console.Write("1 - " + this.bancoDados[this.posicao].nomeAnime);
+        for(int i = 0; i < Animes.qtdAnimes; i++){
+            for(int pos = 8; pos < 8 + Animes.qtdAnimes; pos++ ){
+                Console.SetCursorPosition(41,pos);
+                Console.Write(this.bancoDados[i].id + " - " + this.bancoDados[i].nomeAnime);
+                i += 1;
+            }
         }
     }
 }
