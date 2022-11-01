@@ -1,10 +1,7 @@
 class Tela
 {
-    // propriedades
     ConsoleColor corTexto, corFundo;
 
-
-    // construtor
     public Tela(ConsoleColor ct = ConsoleColor.Cyan,
                 ConsoleColor cf = ConsoleColor.Black)
     {
@@ -25,61 +22,137 @@ class Tela
 
     public void montarTelaSistema()
     {
-        this.montarMoldura(0, 0, 0, 119, 28);
+        this.montarMolduraMenu(0, 0, 119, 13);
         this.montarLinhaHor(2, 0, 119);
         this.centralizar(1, 0, 100, "Lista de Animes");
+        this.montarMolduraLista(18,2,56,13);
+        this.montarLinhaHorLista(4,18,56);
+        this.centralizar(3,15,56,"Lista");
+        this.montarMolduraInfo(56,2,119,13);
+        this.montarLinhaHorInfos(4,56,119);
+        this.centralizar(3,51,119,"Animes");
     }
 
 
-    public void montarMoldura(int ci, int li, int cm, int cf, int lf)
+    public void montarMolduraMenu(int ci, int li, int cf, int lf)
     {
         int col, lin;
 
-        // limpa a area em que será montada a moldura
         this.limparArea(ci, li, cf, lf);
 
-        // desenha as linhas horizontais
         for (col = ci; col <= cf; col++)
         {
             Console.SetCursorPosition(col, li);
-            Console.Write("-");
+            Console.Write("─");
             Console.SetCursorPosition(col, lf);
-            Console.Write("-");
+            Console.Write("─");
         }
 
-        // desenha as linhas verticais
         for (lin = li; lin <= lf; lin++)
         {
             Console.SetCursorPosition(ci, lin);
-            Console.Write("|");
+            Console.Write("│");
             Console.SetCursorPosition(cf, lin);
-            Console.Write("|");
-            Console.SetCursorPosition(cm, lin);
-            Console.Write("|");
+            Console.Write("│");
         }
 
-        // desenha os cantos da moldura
-        Console.SetCursorPosition(ci, li); Console.Write("+");
-        Console.SetCursorPosition(ci, lf); Console.Write("+");
-        Console.SetCursorPosition(cf, li); Console.Write("+");
-        Console.SetCursorPosition(cf, lf); Console.Write("+");
-        Console.SetCursorPosition(cm, li); Console.Write("+");
-        Console.SetCursorPosition(cm, lf); Console.Write("+");
+        Console.SetCursorPosition(ci, li); Console.Write("┌");
+        Console.SetCursorPosition(ci, lf); Console.Write("└");
+        Console.SetCursorPosition(cf, li); Console.Write("┐");
+        Console.SetCursorPosition(cf, lf); Console.Write("┘");
+    }
+
+    public void montarMolduraOpcoes(int ci, int li, int cf, int lf)
+    {
+        int col, lin;
+
+        this.limparArea(ci, li, cf, lf);
+
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, li);
+            Console.Write("─");
+            Console.SetCursorPosition(col, lf);
+            Console.Write("─");
+        }
+
+        for (lin = li; lin <= lf; lin++)
+        {
+            Console.SetCursorPosition(ci, lin);
+            Console.Write("│");
+            Console.SetCursorPosition(cf, lin);
+            Console.Write("│");
+        }
+
+        Console.SetCursorPosition(ci, li); Console.Write("├");
+        Console.SetCursorPosition(ci, lf); Console.Write("└");
+        Console.SetCursorPosition(cf, li); Console.Write("┬");
+        Console.SetCursorPosition(cf, lf); Console.Write("┴");
+    }
+
+    public void montarMolduraLista(int ci, int li, int cf, int lf)
+    {
+        int col, lin;
+
+        this.limparArea(ci, li, cf, lf);
+
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, li);
+            Console.Write("─");
+            Console.SetCursorPosition(col, lf);
+            Console.Write("─");
+        }
+
+        for (lin = li; lin <= lf; lin++)
+        {
+            Console.SetCursorPosition(ci, lin);
+            Console.Write("│");
+            Console.SetCursorPosition(cf, lin);
+            Console.Write("│");
+        }
+
+        Console.SetCursorPosition(ci, li); Console.Write("┬");
+        Console.SetCursorPosition(ci, lf); Console.Write("┴");
+        Console.SetCursorPosition(cf, li); Console.Write("┬");
+        Console.SetCursorPosition(cf, lf); Console.Write("┴");
+    }
+
+    public void montarMolduraInfo(int ci, int li, int cf, int lf)
+    {
+        int col, lin;
+
+        this.limparArea(ci, li, cf, lf);
+
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, li);
+            Console.Write("─");
+            Console.SetCursorPosition(col, lf);
+            Console.Write("─");
+        }
+
+        for (lin = li; lin <= lf; lin++)
+        {
+            Console.SetCursorPosition(ci, lin);
+            Console.Write("│");
+            Console.SetCursorPosition(cf, lin);
+            Console.Write("│");
+        }
+
+        Console.SetCursorPosition(ci, li); Console.Write("┬");
+        Console.SetCursorPosition(ci, lf); Console.Write("┴");
+        Console.SetCursorPosition(cf, li); Console.Write("┤");
+        Console.SetCursorPosition(cf, lf); Console.Write("┘");
     }
 
 
     public void limparArea(int ci, int li, int cf, int lf)
     {
         int col, lin;
-        // para cada coluna
-        for (col = ci; col <= cf; col++)
-        {
-            // em cada uma das linahs
-            for (lin = li; lin <= lf; lin++)
-            {
-                // posiciona
+        for (col = ci; col <= cf; col++){
+            for (lin = li; lin <= lf; lin++){
                 Console.SetCursorPosition(col, lin);
-                // imprime 1 espaço em branco para "limpar"
                 Console.Write(" ");
             }
         }
@@ -89,19 +162,44 @@ class Tela
     public void montarLinhaHor(int lin, int ci, int cf)
     {
         int col;
-        // traça a linha
         for (col = ci; col <= cf; col++)
         {
             Console.SetCursorPosition(col, lin);
-            Console.Write("-");
+            Console.Write("─");
         }
-        // arruma as pontas
         Console.SetCursorPosition(ci, lin);
-        Console.Write("+");
+        Console.Write("├");
         Console.SetCursorPosition(cf, lin);
-        Console.Write("+");
+        Console.Write("┼");
     }
 
+    public void montarLinhaHorLista(int lin, int ci, int cf)
+    {
+        int col;
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, lin);
+            Console.Write("─");
+        }
+        Console.SetCursorPosition(ci, lin);
+        Console.Write("┼");
+        Console.SetCursorPosition(cf, lin);
+        Console.Write("┼");
+    }
+
+    public void montarLinhaHorInfos(int lin, int ci, int cf)
+    {
+        int col;
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, lin);
+            Console.Write("─");
+        }
+        Console.SetCursorPosition(ci, lin);
+        Console.Write("┼");
+        Console.SetCursorPosition(cf, lin);
+        Console.Write("┤");
+    }
 
     public void centralizar(int lin, int ci, int cf, string msg)
     {
@@ -112,18 +210,15 @@ class Tela
     }
 
     public string mostrarMenu(List<string> menu, int ci, int li){
-        int cf, lf, cm, x;
+        int cf, lf, x;
         string op;
 
-        // calcula a linha final e a coluna final
         cf = ci + menu[0].Length + 1;
-        lf = li + menu.Count() + 21;
-        cm = 56;
+        lf = li + menu.Count() + 6;
 
-        // monta a moldura do menu
-        this.montarMoldura(ci,li, cm, cf,lf);
+        this.montarMolduraOpcoes(ci,li,cf,lf);
+        this.montarLinhaHor(4,0,18);
 
-        // mostra as opções do menu
         for ( x = 0; x < menu.Count(); x++){
             Console.SetCursorPosition(ci+1, li+x+1);
             Console.Write(menu[x]);
