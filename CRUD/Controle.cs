@@ -50,11 +50,11 @@ class ControleFunc{
 
             if(achou){
                 this.mostrarInfosAnimes();
-                string resp = this.tela.perguntar(57, 12, "Deseja Atualizar ou Voltar (A/V): ");
+                string resp = this.tela.perguntar(57, 12, "Deseja Atualizar ou Voltar? (A/V): ");
                 if(resp.ToUpper() == "A"){
                     this.numEmps = this.tela.perguntar(57,11,"Número de episódios: ");
                     this.tela.limparArea(57,12,118,12);
-                    resp = this.tela.perguntar(57,12,"Confirma alteração (S/N): ");
+                    resp = this.tela.perguntar(57,12,"Confirmar alteração? (S/N): ");
                     if (resp.ToUpper() == "S"){
                         this.bancoDados[this.posicao].numeps = this.numEmps;
                     }
@@ -69,7 +69,7 @@ class ControleFunc{
                     this.numEmps  = this.tela.perguntar(72,10,"");
 
                     this.tela.limparArea(57,11,118,11);
-                    resp = this.tela.perguntar(57,11,"Confirma cadastro (S/N): ");
+                    resp = this.tela.perguntar(57,11,"Confirmar cadastro? (S/N): ");
                     if (resp.ToUpper() == "S"){
                         this.addAnime();
                     }
