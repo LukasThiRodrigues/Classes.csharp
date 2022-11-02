@@ -21,6 +21,50 @@ class ControleFunc{
         bancoDados.Add(new Animes("Bleach", "Tite Kubo", "16", "Ação, Aventura, Fantasia, Comédia dramática", "366"));
     }
 
+    public void executarEasterEgg(){
+        this.tela.montarMolduraEasterEgg(0,0,119,13);
+        tela.easterEgg();
+        Console.ReadKey();
+    }
+
+    public void montarTelaInfos(){
+        Console.SetCursorPosition(57,5);
+        Console.Write("Id           :");
+        Console.SetCursorPosition(57,6);
+        Console.Write("Nome         :");
+        Console.SetCursorPosition(57,7);
+        Console.Write("Criador      :");
+        Console.SetCursorPosition(57,8);
+        Console.Write("Faixa etária :");
+        Console.SetCursorPosition(57,9);
+        Console.Write("Gênero       :");
+        Console.SetCursorPosition(57,10);
+        Console.Write("Número Eps   :");
+    }
+
+    public void mostrarInfosAnimes(){
+        Console.SetCursorPosition(72,6);
+        Console.Write(this.bancoDados[this.posicao].nomeAnime);
+        Console.SetCursorPosition(72,7);
+        Console.Write(this.bancoDados[this.posicao].Criador);
+        Console.SetCursorPosition(72,8);
+        Console.Write(this.bancoDados[this.posicao].faixaEtaria);
+        Console.SetCursorPosition(72,9);
+        Console.Write(this.bancoDados[this.posicao].genero);
+        Console.SetCursorPosition(72,10);
+        Console.Write(this.bancoDados[this.posicao].numeps);
+    }
+
+    public void montarLista(){
+        for(int i = 0; i < Animes.qtdAnimes; i++){
+            for(int pos = 5; pos < 5 + Animes.qtdAnimes; pos++ ){
+                Console.SetCursorPosition(19,pos);
+                Console.Write(this.bancoDados[i].id + " - " + this.bancoDados[i].nomeAnime);
+                i += 1;
+            }
+        }
+    }
+
     public void executarLista(){
             this.tela.montarMolduraLista(18,2,56,13);
             this.tela.montarLinhaHorLista(4,18,56);
@@ -80,43 +124,5 @@ class ControleFunc{
 
     public void addAnime(){
         this.bancoDados.Add(new Animes(this.nomeAnime ,this.criadorAnime, this.faixaEtaria, this.genero, this.numEmps));
-    }
-
-    public void montarTelaInfos(){
-        Console.SetCursorPosition(57,5);
-        Console.Write("Id           :");
-        Console.SetCursorPosition(57,6);
-        Console.Write("Nome         :");
-        Console.SetCursorPosition(57,7);
-        Console.Write("Criador      :");
-        Console.SetCursorPosition(57,8);
-        Console.Write("Faixa etária :");
-        Console.SetCursorPosition(57,9);
-        Console.Write("Gênero       :");
-        Console.SetCursorPosition(57,10);
-        Console.Write("Número Eps   :");
-    }
-
-    public void mostrarInfosAnimes(){
-        Console.SetCursorPosition(72,6);
-        Console.Write(this.bancoDados[this.posicao].nomeAnime);
-        Console.SetCursorPosition(72,7);
-        Console.Write(this.bancoDados[this.posicao].Criador);
-        Console.SetCursorPosition(72,8);
-        Console.Write(this.bancoDados[this.posicao].faixaEtaria);
-        Console.SetCursorPosition(72,9);
-        Console.Write(this.bancoDados[this.posicao].genero);
-        Console.SetCursorPosition(72,10);
-        Console.Write(this.bancoDados[this.posicao].numeps);
-    }
-
-    public void montarLista(){
-        for(int i = 0; i < Animes.qtdAnimes; i++){
-            for(int pos = 5; pos < 5 + Animes.qtdAnimes; pos++ ){
-                Console.SetCursorPosition(19,pos);
-                Console.Write(this.bancoDados[i].id + " - " + this.bancoDados[i].nomeAnime);
-                i += 1;
-            }
-        }
     }
 }

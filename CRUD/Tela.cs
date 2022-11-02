@@ -19,18 +19,23 @@ class Tela
         Console.Clear();
     }
 
-
-    public void montarTelaSistema()
-    {
-        this.montarMolduraMenu(0, 0, 119, 13);
-        this.montarLinhaHor(2, 0, 119);
-        this.centralizar(1, 0, 100, "Lista de Animes");
-        this.montarMolduraLista(18,2,56,13);
-        this.montarLinhaHorLista(4,18,56);
-        this.centralizar(3,15,56,"Lista");
-        this.montarMolduraInfo(56,2,119,13);
-        this.montarLinhaHorInfos(4,56,119);
-        this.centralizar(3,51,119,"Animes");
+    public void easterEgg(){
+        Console.Write("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⣿⣿⡿⠟⠉⠁⠄⠄⠄⠄⠉⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⣿⡿⠄⠄⣀⣤⣦⣶⣦⣦⣤⣤⣠⣀⠄⠹⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⠟⠁⠄⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠄⠹⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⡏⠄⢂⠄⠄⠸⠻⠿⠿⣿⣿⣿⣿⠿⠟⢿⡿⡀⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⡇⠄⠈⠄⠄⠄⠄⠄⠄⠄⢹⣇⣀⣄⣘⣹⣇⣇⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⡇⠄⠄⠄⠰⠄⣀⡀⣤⡀⢨⣿⣾⣧⣷⣿⣿⣬⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⠄⠄⠄⠄⠄⠘⣿⡟⠄⢀⣩⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⡇⠄⠄⠄⠄⠰⣏⠄⠈⢨⣍⣉⣛⣽⣿⣿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⣿⣶⡀⠄⠄⠄⠛⢀⢄⢰⣽⣿⣿⣿⣿⢟⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄⠄⠈⢃⡙⢛⡻⣻⣿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⠄⠄⢠⣶⣶⣾⣿⡿⣿⣿⣿⣿⣿⣿");
+        // Console.Write("⣿⣿⣿⠿⠛⠁⠄⠄⢺⣶⣦⡀⠄⠄⢰⣻⢿⣿⣿⡇⠈⠻⣿⣿⣿⣿");
+        // Console.Write("⠉⠁⠄⠄⠄⠄⠄⠄⠄⠻⣿⣿⡷⠆⠄⢓⢿⣿⣿⡇⠄⠄⠄⠄⠉⠙");
+        // Console.Write("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢻⠏⠄⠄⠐⠄⣄⠹⣿⡇⠄⠄⠄⠄⠄⠄");
+        // Console.Write("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢷⣤⡠⠄⢸⣿⣿⣮⠄⠄⠄⠄⠄⠄⠄");
     }
 
 
@@ -116,6 +121,34 @@ class Tela
         Console.SetCursorPosition(ci, lf); Console.Write("┴");
         Console.SetCursorPosition(cf, li); Console.Write("┬");
         Console.SetCursorPosition(cf, lf); Console.Write("┴");
+    }
+
+    public void montarMolduraEasterEgg(int ci, int li, int cf, int lf)
+    {
+        int col, lin;
+
+        this.limparArea(ci, li, cf, lf);
+
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, li);
+            Console.Write("─");
+            Console.SetCursorPosition(col, lf);
+            Console.Write("─");
+        }
+
+        for (lin = li; lin <= lf; lin++)
+        {
+            Console.SetCursorPosition(ci, lin);
+            Console.Write("│");
+            Console.SetCursorPosition(cf, lin);
+            Console.Write("│");
+        }
+
+        Console.SetCursorPosition(ci, li); Console.Write("┌");
+        Console.SetCursorPosition(ci, lf); Console.Write("└");
+        Console.SetCursorPosition(cf, li); Console.Write("┐");
+        Console.SetCursorPosition(cf, lf); Console.Write("┘");
     }
 
     public void montarMolduraInfo(int ci, int li, int cf, int lf)
@@ -235,5 +268,18 @@ class Tela
         Console.Write(perg);
         resp = Console.ReadLine();
         return resp;
+    }
+
+    public void montarTelaSistema()
+    {
+        this.montarMolduraMenu(0, 0, 119, 17);
+        this.montarLinhaHor(2, 0, 119);
+        this.centralizar(1, 0, 100, "Lista de Animes");
+        this.montarMolduraLista(18,2,56,13);
+        this.montarLinhaHorLista(4,18,56);
+        this.centralizar(3,15,56,"Lista");
+        this.montarMolduraInfo(56,2,119,13);
+        this.montarLinhaHorInfos(4,56,119);
+        this.centralizar(3,51,119,"Animes");
     }
 }
