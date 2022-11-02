@@ -19,25 +19,74 @@ class Tela
         Console.Clear();
     }
 
-    public void easterEgg(){
-        Console.Write("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⣿⣿⡿⠟⠉⠁⠄⠄⠄⠄⠉⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⣿⡿⠄⠄⣀⣤⣦⣶⣦⣦⣤⣤⣠⣀⠄⠹⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⠟⠁⠄⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠄⠹⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⡏⠄⢂⠄⠄⠸⠻⠿⠿⣿⣿⣿⣿⠿⠟⢿⡿⡀⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⡇⠄⠈⠄⠄⠄⠄⠄⠄⠄⢹⣇⣀⣄⣘⣹⣇⣇⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⡇⠄⠄⠄⠰⠄⣀⡀⣤⡀⢨⣿⣾⣧⣷⣿⣿⣬⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⠄⠄⠄⠄⠄⠘⣿⡟⠄⢀⣩⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⡇⠄⠄⠄⠄⠰⣏⠄⠈⢨⣍⣉⣛⣽⣿⣿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⣿⣶⡀⠄⠄⠄⠛⢀⢄⢰⣽⣿⣿⣿⣿⢟⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄⠄⠈⢃⡙⢛⡻⣻⣿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⠄⠄⢠⣶⣶⣾⣿⡿⣿⣿⣿⣿⣿⣿");
-        // Console.Write("⣿⣿⣿⠿⠛⠁⠄⠄⢺⣶⣦⡀⠄⠄⢰⣻⢿⣿⣿⡇⠈⠻⣿⣿⣿⣿");
-        // Console.Write("⠉⠁⠄⠄⠄⠄⠄⠄⠄⠻⣿⣿⡷⠆⠄⢓⢿⣿⣿⡇⠄⠄⠄⠄⠉⠙");
-        // Console.Write("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢻⠏⠄⠄⠐⠄⣄⠹⣿⡇⠄⠄⠄⠄⠄⠄");
-        // Console.Write("⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢷⣤⡠⠄⢸⣿⣿⣮⠄⠄⠄⠄⠄⠄⠄");
+    public void limparArea(int ci, int li, int cf, int lf)
+    {
+        int col, lin;
+        for (col = ci; col <= cf; col++){
+            for (lin = li; lin <= lf; lin++){
+                Console.SetCursorPosition(col, lin);
+                Console.Write(" ");
+            }
+        }
     }
 
+    public string perguntar(int col, int lin, string perg){
+        string resp = "S";
+        Console.SetCursorPosition(col,lin);
+        Console.Write(perg);
+        resp = Console.ReadLine();
+        return resp;
+    }
+
+    public void montarLinhaHor(int lin, int ci, int cf)
+    {
+        int col;
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, lin);
+            Console.Write("─");
+        }
+        Console.SetCursorPosition(ci, lin);
+        Console.Write("├");
+        Console.SetCursorPosition(cf, lin);
+        Console.Write("┼");
+    }
+
+    public void montarLinhaHorLista(int lin, int ci, int cf)
+    {
+        int col;
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, lin);
+            Console.Write("─");
+        }
+        Console.SetCursorPosition(ci, lin);
+        Console.Write("┼");
+        Console.SetCursorPosition(cf, lin);
+        Console.Write("┼");
+    }
+
+    public void montarLinhaHorInfos(int lin, int ci, int cf)
+    {
+        int col;
+        for (col = ci; col <= cf; col++)
+        {
+            Console.SetCursorPosition(col, lin);
+            Console.Write("─");
+        }
+        Console.SetCursorPosition(ci, lin);
+        Console.Write("┼");
+        Console.SetCursorPosition(cf, lin);
+        Console.Write("┤");
+    }
+
+    public void centralizar(int lin, int ci, int cf, string msg)
+    {
+        int col;
+        col = ci+((cf-ci)/2);
+        Console.SetCursorPosition(col,lin);
+        Console.Write(msg);
+    }
 
     public void montarMolduraMenu(int ci, int li, int cf, int lf)
     {
@@ -123,34 +172,6 @@ class Tela
         Console.SetCursorPosition(cf, lf); Console.Write("┴");
     }
 
-    public void montarMolduraEasterEgg(int ci, int li, int cf, int lf)
-    {
-        int col, lin;
-
-        this.limparArea(ci, li, cf, lf);
-
-        for (col = ci; col <= cf; col++)
-        {
-            Console.SetCursorPosition(col, li);
-            Console.Write("─");
-            Console.SetCursorPosition(col, lf);
-            Console.Write("─");
-        }
-
-        for (lin = li; lin <= lf; lin++)
-        {
-            Console.SetCursorPosition(ci, lin);
-            Console.Write("│");
-            Console.SetCursorPosition(cf, lin);
-            Console.Write("│");
-        }
-
-        Console.SetCursorPosition(ci, li); Console.Write("┌");
-        Console.SetCursorPosition(ci, lf); Console.Write("└");
-        Console.SetCursorPosition(cf, li); Console.Write("┐");
-        Console.SetCursorPosition(cf, lf); Console.Write("┘");
-    }
-
     public void montarMolduraInfo(int ci, int li, int cf, int lf)
     {
         int col, lin;
@@ -179,69 +200,6 @@ class Tela
         Console.SetCursorPosition(cf, lf); Console.Write("┘");
     }
 
-
-    public void limparArea(int ci, int li, int cf, int lf)
-    {
-        int col, lin;
-        for (col = ci; col <= cf; col++){
-            for (lin = li; lin <= lf; lin++){
-                Console.SetCursorPosition(col, lin);
-                Console.Write(" ");
-            }
-        }
-    }
-
-
-    public void montarLinhaHor(int lin, int ci, int cf)
-    {
-        int col;
-        for (col = ci; col <= cf; col++)
-        {
-            Console.SetCursorPosition(col, lin);
-            Console.Write("─");
-        }
-        Console.SetCursorPosition(ci, lin);
-        Console.Write("├");
-        Console.SetCursorPosition(cf, lin);
-        Console.Write("┼");
-    }
-
-    public void montarLinhaHorLista(int lin, int ci, int cf)
-    {
-        int col;
-        for (col = ci; col <= cf; col++)
-        {
-            Console.SetCursorPosition(col, lin);
-            Console.Write("─");
-        }
-        Console.SetCursorPosition(ci, lin);
-        Console.Write("┼");
-        Console.SetCursorPosition(cf, lin);
-        Console.Write("┼");
-    }
-
-    public void montarLinhaHorInfos(int lin, int ci, int cf)
-    {
-        int col;
-        for (col = ci; col <= cf; col++)
-        {
-            Console.SetCursorPosition(col, lin);
-            Console.Write("─");
-        }
-        Console.SetCursorPosition(ci, lin);
-        Console.Write("┼");
-        Console.SetCursorPosition(cf, lin);
-        Console.Write("┤");
-    }
-
-    public void centralizar(int lin, int ci, int cf, string msg)
-    {
-        int col;
-        col = ci+((cf-ci)/2);
-        Console.SetCursorPosition(col,lin);
-        Console.Write(msg);
-    }
-
     public string mostrarMenu(List<string> menu, int ci, int li){
         int cf, lf, x;
         string op;
@@ -262,17 +220,9 @@ class Tela
             return op;
     }
 
-    public string perguntar(int col, int lin, string perg){
-        string resp = "S";
-        Console.SetCursorPosition(col,lin);
-        Console.Write(perg);
-        resp = Console.ReadLine();
-        return resp;
-    }
-
     public void montarTelaSistema()
     {
-        this.montarMolduraMenu(0, 0, 119, 17);
+        this.montarMolduraMenu(0, 0, 119, 13);
         this.montarLinhaHor(2, 0, 119);
         this.centralizar(1, 0, 100, "Lista de Animes");
         this.montarMolduraLista(18,2,56,13);

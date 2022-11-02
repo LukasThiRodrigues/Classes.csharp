@@ -21,12 +21,6 @@ class ControleFunc{
         bancoDados.Add(new Animes("Bleach", "Tite Kubo", "16", "Ação, Aventura, Fantasia, Comédia dramática", "366"));
     }
 
-    public void executarEasterEgg(){
-        this.tela.montarMolduraEasterEgg(0,0,119,13);
-        tela.easterEgg();
-        Console.ReadKey();
-    }
-
     public void montarTelaInfos(){
         Console.SetCursorPosition(57,5);
         Console.Write("Id           :");
@@ -63,6 +57,10 @@ class ControleFunc{
                 i += 1;
             }
         }
+    }
+
+    public void addAnime(){
+        this.bancoDados.Add(new Animes(this.nomeAnime, this.criadorAnime, this.faixaEtaria, this.genero, this.numEmps));
     }
 
     public void executarLista(){
@@ -120,9 +118,5 @@ class ControleFunc{
                 }
             }
         }
-    }
-
-    public void addAnime(){
-        this.bancoDados.Add(new Animes(this.nomeAnime ,this.criadorAnime, this.faixaEtaria, this.genero, this.numEmps));
     }
 }
