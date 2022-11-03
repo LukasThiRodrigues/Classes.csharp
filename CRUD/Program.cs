@@ -21,4 +21,4 @@ while(true){
     if(opcao == "2") anime.executarINFOS();
 }
 
-Console.Clear();
+// Console.Clear();
