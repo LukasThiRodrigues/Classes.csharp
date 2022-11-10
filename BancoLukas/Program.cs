@@ -7,7 +7,7 @@ List<string> menuPrincipal = new List<string>();
 menuPrincipal.Add("1 - Contas      ");
 menuPrincipal.Add("2 - Movimentação");
 menuPrincipal.Add("3 - Extrato     ");
-menuPrincipal.Add("4 - Sair        ");
+menuPrincipal.Add("0 - Sair        ");
 
 tela.configurarTela();
 
