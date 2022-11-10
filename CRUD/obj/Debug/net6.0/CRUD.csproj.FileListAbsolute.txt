@@ -1,0 +1,15 @@
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\bin\Debug\net6.0\CRUD.exe
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\bin\Debug\net6.0\CRUD.deps.json
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\bin\Debug\net6.0\CRUD.runtimeconfig.json
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\bin\Debug\net6.0\CRUD.dll
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\bin\Debug\net6.0\CRUD.pdb
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.csproj.AssemblyReference.cache
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.AssemblyInfoInputs.cache
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.AssemblyInfo.cs
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.csproj.CoreCompileInputs.cache
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.dll
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\refint\CRUD.dll
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.pdb
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\CRUD.genruntimeconfig.cache
+C:\Users\lukas\OneDrive\Documentos\Coisas Lukas\Classes.csharp\CRUD\obj\Debug\net6.0\ref\CRUD.dll
