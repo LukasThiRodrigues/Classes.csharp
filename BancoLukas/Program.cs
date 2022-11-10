@@ -1,4 +1,6 @@
 ﻿Tela tela = new Tela();
+ControleConta contas = new ControleConta(tela);
+
 string opcao;
 List<string> menuPrincipal = new List<string>();
 
@@ -14,7 +16,7 @@ while(true){
     opcao = tela.mostrarMenu(menuPrincipal,3,3);
 
     if(opcao == "0") break;
-    // if(opcao == "1") 
+    if(opcao == "1") contas.executarCRUD();
 }
 
 //tela.montarMoldura(5,5,40,10);
