@@ -1,0 +1,15 @@
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\bin\Debug\net6.0\Vitimas.exe
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\bin\Debug\net6.0\Vitimas.deps.json
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\bin\Debug\net6.0\Vitimas.runtimeconfig.json
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\bin\Debug\net6.0\Vitimas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\bin\Debug\net6.0\Vitimas.pdb
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.csproj.AssemblyReference.cache
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.AssemblyInfoInputs.cache
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.AssemblyInfo.cs
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.csproj.CoreCompileInputs.cache
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\refint\Vitimas.dll
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.pdb
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\Vitimas.genruntimeconfig.cache
+C:\Users\lukas.rodrigues\Documents\Classes\Vitimas\obj\Debug\net6.0\ref\Vitimas.dll
