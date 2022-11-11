@@ -1,6 +1,6 @@
 class CRUD{
     // atributos
-    Alvos alvo;
+    Alvos alvo = new Alvos();
     List<Alvos> vitimas = new List<Alvos>();
     int posicao;
     Tela tela;
@@ -8,28 +8,52 @@ class CRUD{
     // construtor
     public CRUD(Tela t){
         this.tela = t;
-                
+
+        // apagaremos depois
+        this.vitimas.Add(new Alvos(1, "Renan", 1000, false));                
     }
 
     // outros métodos
     public void executarCRUD(){
         while(true){
             // mostra tela
+            this.tela.escrever(10,5,"Cadastro de Alvos");
             // pergunta codigo
+            this.alvo.codigo = Convert.ToInt16(this.tela.perguntar(10,6,"Código: "));
             // procura codigo
+            bool achou = false;
+            for(int x=0; x<this.vitimas.Count; x++){
+                if (this.alvo.codigo == this.vitimas[x].codigo){
+                    this.alvo = this.vitimas[x];
+                    this.posicao = x;
+                    achou = true;
+                    break;
+                }
+            }
             // se achou codigo
-            //      mostra os dados do registo
-            //      pergunta se deseja A/E
-            //      se deseja ALTERAR
-            //          pergunta novos dados
-            //          pede para confirmar novos dados
-            //          se confirmado
-            //              grava os novos dados
-            //      se deseja EXCLUIR
-            //          pede para confirmar exclusão
-            //          se confirmado
-            //              exclui o registro
+            if(achou){
+                // mostra os dados do registo
+                this.tela.escrever(10,7,"Nome  : " + this.alvo.nome);
+                this.tela.escrever(10,8,"Valor : " + Convert.ToString(this.alvo.valor));
+                this.tela.escrever(10,9,"Vivo  : " + Convert.ToString(this.alvo.entVivo));
+                // pergunta se deseja A/E
+                string resp = this.tela.perguntar(10,11,"Alterar/Excluir/Voltar (A/E/V):");
+                // se deseja ALTERAR
+                if(resp.ToUpper()=="A"){
+                    // pergunta novos dados
+                    // pede para confirmar novos dados
+                    // se confirmado
+                    // grava os novos dados
+                }
+                // se deseja EXCLUIR
+                else if (resp.ToUpper()=="E"){
+                    // pede para confirmar exclusão
+                    // se confirmado
+                    // exclui o registro
+                }
+            }
             // se não achou codigo
+            else{
             //      informa que não encontrou
             //      pergunta se deseja cadastrar
             //      se confirmado
@@ -37,6 +61,7 @@ class CRUD{
             //          pergunta se confirma registro
             //          se confirmado
             //              cadastra novo registro
+            }
         }
     }
 }
